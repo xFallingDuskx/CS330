@@ -8,6 +8,9 @@ public class Closet {
     }
 
     public static double minimumDistance(List<double[]> points) {
+        int n = points.size();
+        System.out.println("The size of input is " + n);
+        System.out.println("Runtime should be equal to or less than " + (n * Math.pow(Math.log(n), 2)));
         
         
         return 90;
@@ -15,9 +18,12 @@ public class Closet {
     
 
     public static void main(String[] args) {
+        System.out.println("Starting Test");
+        long startTime = System.currentTimeMillis();
         List<double[]> test = new ArrayList<double[]>();
         test.add(new double[]{1, 2});
         System.out.println(Closet.minimumDistance(test));
-        System.out.println(Closet.calcDist(2, 2.5, 3, 1.5));
+        long endTime = System.currentTimeMillis();
+        System.out.println("Final runtime is " + ((endTime - startTime) / 1000F));
     }
 }
