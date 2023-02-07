@@ -3,10 +3,6 @@ import java.lang.Math;
 
 public class Closest {
 
-    public static double calcDist(double x1, double y1, double x2, double y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-    }
-
     public static void sortPoints(List<double[]> points) {
         Collections.sort(points, new Comparator<double[]>() {
 
@@ -23,10 +19,36 @@ public class Closest {
         });
     }
 
+    public static double calcDist(double x1, double y1, double x2, double y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    public static double recurse(List<double[]> points) {
+        int size = points.size();
+        if (size == 2) {
+            return Closest.calcDist(points.get(0)[0], points.get(0)[1], points.get(1)[0], points.get(1)[1]);
+        } else if (size == 1) {
+            return Double.MAX_VALUE;
+        }
+
+        int medIdx = Math.floorDiv(size, 2); 
+        System.out.println("Size of " + size + " has a medIdx of " + medIdx);
+        double leftMin = recurse(points.subList(0, medIdx + (size % 2))); // (size % 2) to account for odd # of items in list
+        double rightMin = recurse(points.subList(medIdx, size - 1));
+        
+        double trueMin;
+        if (leftMin < rightMin) {
+            trueMin = leftMin;
+        }
+        trueMin = rightMin;
+        
+        return trueMin;
+    }
+
     public static double minimumDistance(List<double[]> points) {
         Closest.sortPoints(points);
-        
-        return 90;
+        double minDist = recurse(points);
+        return minDist;
     }
     
 
