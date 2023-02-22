@@ -27,14 +27,14 @@ public class Closest {
         int size = points.size();
         if (size == 2) {
             return Closest.calcDist(points.get(0)[0], points.get(0)[1], points.get(1)[0], points.get(1)[1]);
-        } else if (size == 1) {
+        } else if (size <= 1) {
             return Double.MAX_VALUE;
         }
 
         int medIdx = Math.floorDiv(size, 2); 
         System.out.println("Size of " + size + " has a medIdx of " + medIdx);
-        double leftMin = recurse(points.subList(0, medIdx + (size % 2))); // (size % 2) to account for odd # of items in list
-        double rightMin = recurse(points.subList(medIdx, size - 1));
+        double leftMin = recurse(points.subList(0, medIdx - 1));
+        double rightMin = recurse(points.subList(medIdx + 1, size - 1));
         
         double trueMin;
         if (leftMin < rightMin) {
