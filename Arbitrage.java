@@ -71,7 +71,7 @@ public class Arbitrage {
                     currPath.add(v);
                     currWeight += weight;
                     if (v == startNode) {
-                        currValue = Math.pow(10, weight);
+                        currValue = Math.pow(10, currWeight);
                         if (currValue > 1) {
                             return currPath;
                         }
@@ -142,12 +142,8 @@ public class Arbitrage {
 
     public List<Integer> arbitrage(int[][] currencies, double[] weights) {
         List<Integer> path = new ArrayList<>();
-        if (currencies.length == 0) {
-            return path;
-        } else if (currencies.length == 1) {
-            path.add(currencies[0][0]);
-            path.add(currencies[0][1]);
-            return path;
+        if (currencies.length <= 1) {
+            return null;
         }
 
         double[] adjWeights = adjustWeights(weights);
@@ -162,7 +158,7 @@ public class Arbitrage {
             truePath.add(path.get(i));
         }
 
-        return truePath;
+        return path;
     }
 
 
@@ -175,7 +171,11 @@ public class Arbitrage {
         tCurrencies[1] = new int[]{2,3};
         tCurrencies[2] = new int[]{3,1};
         double[] tWeights = new double[]{130.0, 0.006, 1.3};
-        System.out.println("Return value: " + A.arbitrage(tCurrencies, tWeights));
+        List<Integer> ans = A.arbitrage(tCurrencies, tWeights);
+        System.out.println("Return value: ");
+        for (Integer i : ans) {
+            System.out.println(i);
+        }
     }
 
 }
