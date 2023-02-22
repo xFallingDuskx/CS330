@@ -79,21 +79,21 @@ public class Arbitrage {
             }
 
 
-            for (int j = 0; j < E; ++j) {
-                System.out.println("--- ITERATION: " + j);
-                int u = graph.edge[j].src;
-                int v = graph.edge[j].dest;
-                double weight = graph.edge[j].weight;
+            // for (int j = 0; j < E; ++j) {
+            //     System.out.println("--- ITERATION: " + j);
+            //     int u = graph.edge[j].src;
+            //     int v = graph.edge[j].dest;
+            //     double weight = graph.edge[j].weight;
 
-                System.out.println("The edge is " + 
-                u + "-" + v + " with weight " + weight); 
-                System.out.println("Original distance is " + dist[v]);
+            //     System.out.println("The edge is " + 
+            //     u + "-" + v + " with weight " + weight); 
+            //     System.out.println("Original distance is " + dist[v]);
 
-                if ((dist[u] != Double.MAX_VALUE) && (dist[u] + weight < dist[v])) {
-                    System.out.println("Graph contains negative weight cycle");
-                    return null;
-                }
-            }
+            //     if ((dist[u] != Double.MAX_VALUE) && (dist[u] + weight < dist[v])) {
+            //         System.out.println("Graph contains negative weight cycle");
+            //         return null;
+            //     }
+            // }
 
             printArr(dist, V);
             return null;
@@ -101,7 +101,7 @@ public class Arbitrage {
 
         // A utility function used to print the solution
         void printArr(double dist[], int V) {
-            System.out.println("Vertex Distance from Source");
+            // System.out.println("Vertex Distance from Source");
             for (int i = 0; i < V; ++i)
                 System.out.println(i + "\t\t" + dist[i]);
         }
@@ -114,8 +114,8 @@ public class Arbitrage {
         Graph graph = new Arbitrage.Graph(V, E);
   
         for (int i = 0; i < adjWeights.length; i++) {
-            graph.edge[i].src = currencies[i][0] - 1;
-            graph.edge[i].dest = currencies[i][1] - 1;
+            graph.edge[i].src = currencies[i][0];
+            graph.edge[i].dest = currencies[i][1];
             graph.edge[i].weight = adjWeights[i];
             nodes.add(graph.edge[i].src);
             nodes.add(graph.edge[i].dest);
@@ -140,6 +140,10 @@ public class Arbitrage {
 
 
     public List<Integer> arbitrage(int[][] currencies, double[] weights) {
+        if (currencies.length <= 1) {
+            return null;
+        }
+
         double[] adjWeights = adjustWeights(weights);
         List<Integer> path = createGraph(currencies, adjWeights);
         List<Integer> truePath = new ArrayList<>();
