@@ -149,7 +149,7 @@ public class Arbitrage {
         double[] adjWeights = adjustWeights(weights);
         path = createGraph(currencies, adjWeights);
         if (path.size() == 0) {
-            return new ArrayList<Integer>();
+            return null;
         }
 
         List<Integer> truePath = new ArrayList<>();
