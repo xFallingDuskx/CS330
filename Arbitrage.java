@@ -58,7 +58,7 @@ public class Arbitrage {
             Iterator<Integer> iterator = nodes.iterator();
             while (iterator.hasNext()) {
                 int startNode = iterator.next();
-                System.out.println("Node is " + startNode);
+                // System.out.println("Node is " + startNode);
                 List<Integer> currPath = new ArrayList<>();
                 double currWeight = 0;
                 double currValue;
@@ -119,9 +119,9 @@ public class Arbitrage {
             graph.edge[i].weight = adjWeights[i];
             nodes.add(graph.edge[i].src);
             nodes.add(graph.edge[i].dest);
-            System.out.println("The new edge is " + 
-            graph.edge[i].src + "-" + graph.edge[i].dest +
-            " with weight " + graph.edge[i].weight);
+            // System.out.println("The new edge is " + 
+            // graph.edge[i].src + "-" + graph.edge[i].dest +
+            // " with weight " + graph.edge[i].weight);
         }
 
 
@@ -146,6 +146,10 @@ public class Arbitrage {
 
         double[] adjWeights = adjustWeights(weights);
         List<Integer> path = createGraph(currencies, adjWeights);
+        if (path.size() == 0) {
+            return new ArrayList<Integer>();
+        }
+
         List<Integer> truePath = new ArrayList<>();
 
         for (int i = path.size() - 1; i >= 0; i--) {
