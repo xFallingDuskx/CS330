@@ -60,6 +60,7 @@ public class Arbitrage {
                 int startNode = iterator.next();
                 // System.out.println("Node is " + startNode);
                 List<Integer> currPath = new ArrayList<>();
+                currPath.add(startNode);
                 double currWeight = 0;
                 double currValue;
                 for (int j = 0; j < E; j++) {
@@ -140,12 +141,17 @@ public class Arbitrage {
 
 
     public List<Integer> arbitrage(int[][] currencies, double[] weights) {
-        if (currencies.length <= 1) {
-            return null;
+        List<Integer> path = new ArrayList<>();
+        if (currencies.length == 0) {
+            return path;
+        } else if (currencies.length == 1) {
+            path.add(currencies[0][0]);
+            path.add(currencies[0][1]);
+            return path;
         }
 
         double[] adjWeights = adjustWeights(weights);
-        List<Integer> path = createGraph(currencies, adjWeights);
+        path = createGraph(currencies, adjWeights);
         if (path.size() == 0) {
             return new ArrayList<Integer>();
         }
