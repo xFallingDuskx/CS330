@@ -44,6 +44,11 @@ To find the runtime of a divide-and-conquer algorithm, we use the Master Theorem
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235208852-12312de1-a172-4158-aa0e-372c48d86de8.png">
 
+There is also the **recursion tree method**, where the recurrence is defined by the length of the longst subtree times the work at each level.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235210012-e65c243e-e6d9-4207-976d-ccfeb7429680.png">
+
+
 ## Graph Traversal and Shortest Paths
 
 ### Solving Problems:
