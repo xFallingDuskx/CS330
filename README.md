@@ -54,21 +54,25 @@ There is also the **recursion tree method**, where the recurrence is defined by 
 ## Graph Traversal and Shortest Paths
 
 ### Solving Problems:
-Graph traversal and shortest path algorithms are used to explore and find paths in graphs. Breadth-first search (BFS) and depth-first search (DFS) are examples of graph traversal algorithms. We also have:
+Graph traversal and shortest path algorithms are used to explore and find paths in graphs. Breadth-first search (BFS) and depth-first search (DFS) are examples of graph traversal algorithms. For shortest path algorithms:
 - Dijkstra: shortest path with **positive** weights
 - Bellman-Ford: shortest path with **negative** weights
 - Floyd-Marsh: shortest path from **every** node to **very** node (so like Bellman-Ford on all possible pairs)
 
-**Topological order** can also be helpful, where we order all vertices V "as they occur earliest"
+There is also:
+- **Topological order** can also be helpful, where we order all vertices "as they occur earliest"
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235227966-4f492196-e9ad-49b6-a181-dd445aa879cb.png">
 
+- **"Reverse" topological order** where we sort in increasing order of $v.post$ for a vertex $v$. This is important as it basically allows us to iterate out from $t$ (our "sink"/"destination" node)
+- **Penalizing weights** in a way that accomplishes the algorithms's goal (i.e. the shortest path with fewest edges, which is addressed by adding a weight of $\frac{1}{|E|}$ to each edge)
 
 ### Proving Correctness:
 To prove the correctness of a graph traversal or shortest path algorithm, we typically use induction on the number of nodes in the graph.
 
 ### Finding Runtimes:
-The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of O(|V|+|E|), where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms have runtimes of $O((|V|+|E|)log|V|)$, $O(|V||E|)$, and $O(|V|^3)$, respectively.
+The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of $O(|V|+|E|)$, where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms have runtimes of $O((|V|+|E|)log|V|)$, $O(|V||E|)$, and $O(|V|^3)$, respectively.
+
 
 ## Dynamic Programming
 
@@ -92,6 +96,7 @@ To prove the correctness of a maximum-flow/min-cut or matching algorithm, we typ
 ### Finding Runtimes:
 The runtime of a maximum-flow/min-cut or matching algorithm depends on the specific algorithm used and the size of the input. Some algorithms have a runtime of O(|V|^2|E|), while others have a runtime of O(|V||E|^2).
 
+
 ## Linear Programming
 
 ### Problem Solving
@@ -109,6 +114,7 @@ The runtime of a maximum-flow/min-cut or matching algorithm depends on the speci
 - The worst-case runtime of the simplex algorithm is exponential in the size of the problem, but in practice it tends to perform much better than this worst-case bound.
 - Other algorithms for solving linear programming problems, such as interior-point methods, have polynomial runtimes in the size of the problem.
 
+
 ## NP-Completeness
 
 ### Problem Solving
@@ -123,6 +129,7 @@ The runtime of a maximum-flow/min-cut or matching algorithm depends on the speci
 ### Finding Runtimes
 - The runtime of an algorithm for an NP-complete problem is typically exponential in the size of the problem.
 - Approximation algorithms and heuristics for NP-complete problems often have polynomial runtimes, but the quality of the solutions they provide may be lower than that of an optimal solution.
+
 
 ## Hashing/Sketches
 
