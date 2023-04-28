@@ -83,7 +83,10 @@ The runtime of a graph traversal or shortest path algorithm depends on the size 
 ## Dynamic Programming
 
 ### Solving Problems:
-Dynamic programming is a technique for solving optimization problems by breaking them down into smaller subproblems and solving each subproblem only once. The solutions to the subproblems are stored in a table and used to solve the larger problem.
+Dynamic programming is a technique for solving optimization problems by breaking them down into smaller subproblems and solving each subproblem only once. The solutions to the subproblems are stored in a table and used to solve the larger problem. Normally, we have:
+
+- **Memoization:** This is a top-down approach where we normally store the solutions in a 2D array. The next time we encounter the same subproblem, we can simply look up the solution in the memoization table instead of recomputing it.
+- **Tabulation:** This is a bottom-up approach where we iteratively solve larger subproblems, often by considering (1) what happens if we do include some element or (2) what happens if we do *not* include some element.
 
 ### Proving Correctness:
 To prove the correctness of a dynamic programming algorithm, we typically use mathematical induction on the size of the subproblems. We show that the solution to a larger subproblem can be computed using the solutions to smaller subproblems.
