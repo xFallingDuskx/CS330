@@ -8,8 +8,9 @@ Sunday, April 30:
 - 11am-3pm: Review materials on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
 
 Monday, May 1:
-- 9am-11am: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
-- 2pm-4pm: Attend review session on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
+- 9am-11:30am: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 12:15pm-1:45pm: Attend review session on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
+- 3pm-4pm: Review material from review session that is still confusing
 
 Tuesday, May 2:
 - 9am-11am: Attend review session on Maximum-Flow/Min-Cut and Matching and Linear Programming.
