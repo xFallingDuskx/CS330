@@ -23,8 +23,6 @@ Wednesday, May 3:
 
 # Review Sheet for Algorithms Final Exam
 
-## 1. Divide-and-Conquer Algorithms
-
 ## Divide-and-Conquer Algorithms
 
 ### Solving Problems:
