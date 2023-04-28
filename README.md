@@ -100,13 +100,18 @@ The runtime of a dynamic programming algorithm depends on the number of subprobl
 ## Maximum-Flow/Min-Cut and Matching
 
 ### Solving Problems:
-Maximum-flow/min-cut and matching are optimization problems that involve finding the maximum flow or minimum cut in a flow network, or finding a maximum matching in a bipartite graph.
+Maximum-flow/min-cut and matching are optimization problems that are often solved using the Ford-Fulkerson algorithm. Some things to keep in mind:
+
+- The **intersection** of the earliest min-cut and latest min-cut will result in a set of edges that exist in *every* min-cut
+- If they are equal to each other, there is only one min-cut
+- Sometimes it best to "create and add" $s$ to a set of vertices to reflect the input/initial state then "create and add" $t$ so that it reflects the output flow/final state
+- **Alternating Paths** algorithm is often useful for bipartisan graphs (a left $L$ and right side $R$) where we want only one vertex in $L$ connected to one vertex in $R$. This algorithm works by repeatedly finding a path $P$ that begins and ends at vertices that have yet to be matches and updateing $M$ (a set of edges $u, v$ that represent a match between vertex $u$ and vertex $v$) to be the symmetric difference between $M$ and $P$
 
 ### Proving Correctness:
-To prove the correctness of a maximum-flow/min-cut or matching algorithm, we typically use duality theory or the augmenting path theorem. 
+To prove the correctness of a maximum-flow/min-cut or matching algorithm, if-and-only-if proofs are often helpful. Remember that they must be proven both ways, where one statement is the result of algorithm and the other is what it means in the context of the problem. For example, "The max-flow is X *if-and-only-if* the number of matches is Y" and "The number of matches is Y *if-and-only-if* the max-flow is X".
 
 ### Finding Runtimes:
-The runtime of a maximum-flow/min-cut or matching algorithm depends on the specific algorithm used and the size of the input. Some algorithms have a runtime of O(|V|^2|E|), while others have a runtime of O(|V||E|^2).
+The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the max-flow.
 
 ### ***Write Any Notes Below or On The Back***
 ---
