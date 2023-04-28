@@ -37,6 +37,12 @@ To prove the correctness of a divide-and-conquer algorithm, we use mathematical 
 ### Finding Runtimes:
 To find the runtime of a divide-and-conquer algorithm, we use the Master Theorem, which provides a formula to compute the runtime of divide-and-conquer algorithms. 
 
+<img width="809" alt="image" src="https://user-images.githubusercontent.com/53449254/235208532-758ddc24-06b4-4b3b-b6f7-29164e4700a7.png">
+<img width="971" alt="image" src="https://user-images.githubusercontent.com/53449254/235208678-69a19efe-119d-4bcd-9ef7-b14247add4c0.png">
+
+**Consider the example for HW1 below**
+<img width="716" alt="image" src="https://user-images.githubusercontent.com/53449254/235208852-12312de1-a172-4158-aa0e-372c48d86de8.png">
+
 ## Graph Traversal and Shortest Paths
 
 ### Solving Problems:
