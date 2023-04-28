@@ -105,7 +105,7 @@ Maximum-flow/min-cut and matching are optimization problems that are often solve
 - The **intersection** of the earliest min-cut and latest min-cut will result in a set of edges that exist in *every* min-cut
 - If they are equal to each other, there is only one min-cut
 - Sometimes it best to "create and add" $s$ to a set of vertices to reflect the input/initial state then "create and add" $t$ so that it reflects the output flow/final state
-- **Alternating Paths** algorithm is often useful for bipartisan graphs (a left $L$ and right side $R$) where we want only one vertex in $L$ connected to one vertex in $R$. This algorithm works by repeatedly finding a path $P$ that begins and ends at vertices that have yet to be matches and updateing $M$ (a set of edges $u, v$ that represent a match between vertex $u$ and vertex $v$) to be the symmetric difference between $M$ and $P$
+  - I.e. the reduction of the Alternating Paths algorithm
 
 ### Proving Correctness:
 To prove the correctness of a maximum-flow/min-cut or matching algorithm, if-and-only-if proofs are often helpful. Remember that they must be proven both ways, where one statement is the result of algorithm and the other is what it means in the context of the problem. For example, "The max-flow is X *if-and-only-if* the number of matches is Y" and "The number of matches is Y *if-and-only-if* the max-flow is X".
@@ -119,19 +119,18 @@ The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the ma
 ## Linear Programming
 
 ### Problem Solving
-- Linear programming is used to solve optimization problems, where we want to maximize or minimize a linear objective function subject to some linear constraints.
-- In order to solve a linear programming problem, we first need to set up a mathematical model of the problem, which involves defining the decision variables, objective function, and constraints.
-- The simplex algorithm is a widely-used method for solving linear programming problems, which involves iteratively moving from one feasible solution to another in a way that improves the objective function value.
+- Linear programming is used to solve optimization problems, where we want to maximize or minimize a linear objective function subject to some linear constraints. In mathematical representation, there is the objective function, constraints, and decision variables (found in the constraints).
+- To manipulate our constraints:
+  - Inequalities: multiple by $-1$ or add slack variables
+  - Equalities: convert into two inequalities using $\ge$ and $\le$
+  - Unresticted variables $x \in R$: replace with two resticted variables, $x^{+}$ and $x^{-}$.
+- Try to remember what the variables and constraints are in context
+  - I.e if the primal form is to maximize the profit given constraints based on materials, the dual form is to minimize the cost of each material 
+- Relationship between primal and dual
 
-### Proving Correctness
-- The correctness of linear programming algorithms relies on the theory of linear algebra and convex optimization.
-- The simplex algorithm is guaranteed to terminate with an optimal solution if certain conditions are met, such as the problem being bounded and having a finite optimal solution.
-- Other algorithms for solving linear programming problems, such as interior-point methods, also have theoretical guarantees of correctness.
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235254699-03adefcf-ca30-4212-be7d-6f12f0b80f95.png">
 
-### Finding Runtimes
-- The runtime of the simplex algorithm depends on the size of the problem, measured by the number of decision variables and constraints.
-- The worst-case runtime of the simplex algorithm is exponential in the size of the problem, but in practice it tends to perform much better than this worst-case bound.
-- Other algorithms for solving linear programming problems, such as interior-point methods, have polynomial runtimes in the size of the problem.
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/53449254/235252834-b4175632-1747-4f69-9a4c-60e66300d1c5.png">
 
 ### ***Write Any Notes Below or On The Back***
 ---
@@ -139,9 +138,8 @@ The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the ma
 ## NP-Completeness
 
 ### Problem Solving
-- NP-completeness is a class of computational problems that are believed to be intractable, meaning that no efficient algorithm exists for solving them.
-- In order to solve an NP-complete problem, we typically use approximation algorithms or heuristics that provide a good enough solution within a reasonable amount of time.
-- Many important computational problems in a wide range of fields, such as scheduling, optimization, and game theory, are known to be NP-complete.
+- NP-completeness is a class of computational problems for which there are no known efficient algorithm exists for solving them.
+- In order to solve an NP-complete problem, we typically use approximation algorithms with a known runtime to provide a good enough solution within a reasonable amount of time.
 
 ### Proving Correctness
 - Proving that a problem is NP-complete typically involves reduction, which means showing that the problem can be transformed into another known NP-complete problem in polynomial time.
