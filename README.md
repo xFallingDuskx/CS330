@@ -23,6 +23,8 @@ Wednesday, May 3:
 - 8:30am-9am: Review materials on NP-Completeness and Hashing/Sketches, or anything else that may still be slightly unclear.
 - Exam day! Give yourself time to review and prepare before the exam.
 
+---
+
 # Review Sheet for Algorithms Final Exam
 
 ## Divide-and-Conquer Algorithms
@@ -50,6 +52,8 @@ There is also the **recursion tree method**, where the recurrence is defined by 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235210012-e65c243e-e6d9-4207-976d-ccfeb7429680.png">
 
+###***Write Any Notes On The Back***
+---
 
 ## Graph Traversal and Shortest Paths
 
@@ -73,6 +77,8 @@ To prove the correctness of a graph traversal or shortest path algorithm, we typ
 ### Finding Runtimes:
 The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of $O(|V|+|E|)$, where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms have runtimes of $O((|V|+|E|)log|V|)$, $O(|V||E|)$, and $O(|V|^3)$, respectively.
 
+###***Write Any Notes On The Back***
+---
 
 ## Dynamic Programming
 
@@ -85,6 +91,9 @@ To prove the correctness of a dynamic programming algorithm, we typically use ma
 ### Finding Runtimes:
 The runtime of a dynamic programming algorithm depends on the number of subproblems and the cost of solving each subproblem. In some cases, the runtime can be exponential, but in most cases, it is polynomial.
 
+###***Write Any Notes On The Back***
+---
+
 ## Maximum-Flow/Min-Cut and Matching
 
 ### Solving Problems:
@@ -96,6 +105,8 @@ To prove the correctness of a maximum-flow/min-cut or matching algorithm, we typ
 ### Finding Runtimes:
 The runtime of a maximum-flow/min-cut or matching algorithm depends on the specific algorithm used and the size of the input. Some algorithms have a runtime of O(|V|^2|E|), while others have a runtime of O(|V||E|^2).
 
+###***Write Any Notes On The Back***
+---
 
 ## Linear Programming
 
@@ -114,6 +125,8 @@ The runtime of a maximum-flow/min-cut or matching algorithm depends on the speci
 - The worst-case runtime of the simplex algorithm is exponential in the size of the problem, but in practice it tends to perform much better than this worst-case bound.
 - Other algorithms for solving linear programming problems, such as interior-point methods, have polynomial runtimes in the size of the problem.
 
+###***Write Any Notes On The Back***
+---
 
 ## NP-Completeness
 
@@ -130,6 +143,8 @@ The runtime of a maximum-flow/min-cut or matching algorithm depends on the speci
 - The runtime of an algorithm for an NP-complete problem is typically exponential in the size of the problem.
 - Approximation algorithms and heuristics for NP-complete problems often have polynomial runtimes, but the quality of the solutions they provide may be lower than that of an optimal solution.
 
+###***Write Any Notes On The Back***
+---
 
 ## Hashing/Sketches
 
