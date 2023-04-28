@@ -11,11 +11,13 @@ Monday, May 1:
 - 9am-11:30am: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
 - 12:15pm-1:45pm: Attend review session on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
 - 3pm-4pm: Review material from review session that is still confusing
+- 4:30pm-8pm: Review midterm 1 and the ones from previous years as well
 
 Tuesday, May 2:
 - 9am-11am: Attend review session on Maximum-Flow/Min-Cut and Matching and Linear Programming.
-- 11am-1pm: Learn more about NP-Completeness.
-- 2pm-4pm: Attend review session on NP-Completeness and Hashing/Sketches.
+- 11am-4pm: Learn more about NP-Completeness and Hashing/Sketches.
+- 2pm-4pm: Attend review session on NP-Completeness 
+- 4:30pm-8pm: Review midterm 2 and the ones from previous years as well
 
 Wednesday, May 3:
 - 8:30am-9am: Review materials on NP-Completeness and Hashing/Sketches, or anything else that may still be slightly unclear.
@@ -52,13 +54,21 @@ There is also the **recursion tree method**, where the recurrence is defined by 
 ## Graph Traversal and Shortest Paths
 
 ### Solving Problems:
-Graph traversal and shortest path algorithms are used to explore and find paths in graphs. Breadth-first search (BFS) and depth-first search (DFS) are examples of graph traversal algorithms. Dijkstra's algorithm and the Bellman-Ford algorithm are examples of shortest path algorithms.
+Graph traversal and shortest path algorithms are used to explore and find paths in graphs. Breadth-first search (BFS) and depth-first search (DFS) are examples of graph traversal algorithms. We also have:
+- Dijkstra: shortest path with **positive** weights
+- Bellman-Ford: shortest path with **negative** weights
+- Floyd-Marsh: shortest path from **every** node to **very** node (so like Bellman-Ford on all possible pairs)
+
+**Topological order** can also be helpful, where we order all vertices V "as they occur earliest"
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235227966-4f492196-e9ad-49b6-a181-dd445aa879cb.png">
+
 
 ### Proving Correctness:
 To prove the correctness of a graph traversal or shortest path algorithm, we typically use induction on the number of nodes in the graph.
 
 ### Finding Runtimes:
-The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of O(|V|+|E|), where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms can have runtimes of O(|V|^2) or O(|E|log|V|) depending on the algorithm used.
+The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of O(|V|+|E|), where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms have runtimes of $O((|V|+|E|)log|V|)$, $O(|V||E|)$, and $O(|V|^3)$, respectively.
 
 ## Dynamic Programming
 
