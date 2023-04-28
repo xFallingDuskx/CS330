@@ -23,7 +23,7 @@ Wednesday, May 3:
 - 8:30am-9am: Review materials on NP-Completeness and Hashing/Sketches, or anything else that may still be slightly unclear.
 - Exam day! Give yourself time to review and prepare before the exam.
 
----
+<div style="page-break-after: always;"></div>
 
 # Review Sheet for Algorithms Final Exam
 
@@ -53,7 +53,7 @@ There is also the **recursion tree method**, where the recurrence is defined by 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/53449254/235210012-e65c243e-e6d9-4207-976d-ccfeb7429680.png">
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## Graph Traversal and Shortest Paths
 
@@ -78,7 +78,7 @@ To prove the correctness of a graph traversal or shortest path algorithm, we typ
 The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of $O(|V|+|E|)$, where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms have runtimes of $O((|V|+|E|)log|V|)$, $O(|V||E|)$, and $O(|V|^3)$, respectively.
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## Dynamic Programming
 
@@ -95,7 +95,7 @@ To prove the correctness of a dynamic programming algorithm, we typically use ma
 The runtime of a dynamic programming algorithm depends on the number of subproblems and the cost of solving each subproblem. In some cases, the runtime can be exponential, but in most cases, it is polynomial.
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## Maximum-Flow/Min-Cut and Matching
 
@@ -114,7 +114,7 @@ To prove the correctness of a maximum-flow/min-cut or matching algorithm, if-and
 The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the max-flow.
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## Linear Programming
 
@@ -133,7 +133,7 @@ The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the ma
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/53449254/235252834-b4175632-1747-4f69-9a4c-60e66300d1c5.png">
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## NP-Completeness
 
@@ -150,7 +150,7 @@ The runtime of Ford-Fulkerson is $O(|E| \times f^{\*})$ where $f^{\*}$ is the ma
 - Approximation algorithms and heuristics for NP-complete problems often have polynomial runtimes, but the quality of the solutions they provide may be lower than that of an optimal solution.
 
 ### ***Write Any Notes Below or On The Back***
----
+<div style="page-break-after: always;"></div>
 
 ## Hashing/Sketches
 
