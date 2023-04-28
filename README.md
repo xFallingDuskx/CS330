@@ -25,99 +25,103 @@ Wednesday, May 3:
 
 ## 1. Divide-and-Conquer Algorithms
 
-Divide-and-conquer algorithms are algorithms that break down a problem into smaller subproblems, solve each subproblem independently, and combine the solutions to form a solution to the original problem.
+## Divide-and-Conquer Algorithms
 
-Examples:
-- Merge sort
-- Quick sort
+### Solving Problems:
+Divide-and-conquer is a problem-solving technique that divides a problem into subproblems of the same type and recursively solves them. The solutions to the subproblems are combined to solve the original problem. To solve a problem using divide-and-conquer, we follow three steps:
+- **Divide:** Break the problem into smaller subproblems that are similar to the original problem.
+- **Conquer:** Solve the subproblems recursively. If the subproblems are small enough, solve them in a brute-force manner.
+- **Combine:** Combine the solutions to the subproblems to solve the original problem.
 
-Resources:
-- [GeeksforGeeks: Divide and Conquer Algorithms](https://www.geeksforgeeks.org/divide-and-conquer-algorithm-introduction/)
-- [Khan Academy: Divide and Conquer Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
+### Proving Correctness:
+To prove the correctness of a divide-and-conquer algorithm, we use mathematical induction. We first prove that the algorithm works correctly for the base case, which is the smallest input size. Then, we assume that the algorithm works correctly for all input sizes smaller than n and prove that it works correctly for input size n. 
 
-## 2. Graph Traversal and Shortest Paths
+### Finding Runtimes:
+To find the runtime of a divide-and-conquer algorithm, we use the Master Theorem, which provides a formula to compute the runtime of divide-and-conquer algorithms. 
 
-Graph traversal algorithms are algorithms that visit all the vertices and edges of a graph in a systematic way. Shortest path algorithms are algorithms that find the shortest path between two vertices in a graph.
+## Graph Traversal and Shortest Paths
 
-Examples:
-- Breadth-first search (BFS)
-- Depth-first search (DFS)
-- Dijkstra's algorithm
-- Bellman-Ford algorithm
-- Floyd-Warshall algorithm
+### Solving Problems:
+Graph traversal and shortest path algorithms are used to explore and find paths in graphs. Breadth-first search (BFS) and depth-first search (DFS) are examples of graph traversal algorithms. Dijkstra's algorithm and the Bellman-Ford algorithm are examples of shortest path algorithms.
 
-Resources:
-- [GeeksforGeeks: Graph Traversal Techniques](https://www.geeksforgeeks.org/graph-traversal-techniques/)
-- [Khan Academy: Graph Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs)
-- [Brilliant: Shortest Paths in Graphs](https://brilliant.org/wiki/shortest-paths-in-graphs/)
+### Proving Correctness:
+To prove the correctness of a graph traversal or shortest path algorithm, we typically use induction on the number of nodes in the graph.
 
-## 3. Dynamic Programming
+### Finding Runtimes:
+The runtime of a graph traversal or shortest path algorithm depends on the size of the input graph and the specific algorithm used. Typically, graph traversal algorithms have a runtime of O(|V|+|E|), where |V| is the number of vertices in the graph and |E| is the number of edges. Shortest path algorithms can have runtimes of O(|V|^2) or O(|E|log|V|) depending on the algorithm used.
 
-Dynamic programming is a technique for solving optimization problems by breaking them down into smaller subproblems and solving each subproblem only once.
+## Dynamic Programming
 
-Examples:
-- Knapsack problem
-- Longest common subsequence problem
-- Edit distance problem
+### Solving Problems:
+Dynamic programming is a technique for solving optimization problems by breaking them down into smaller subproblems and solving each subproblem only once. The solutions to the subproblems are stored in a table and used to solve the larger problem.
 
-Resources:
-- [GeeksforGeeks: Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)
-- [Khan Academy: Dynamic Programming](https://www.khanacademy.org/computing/computer-science/algorithms/dynamic-programming/a/dynamic-programming-overview)
-- [MIT OpenCourseWare: Introduction to Dynamic Programming](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec20.pdf)
+### Proving Correctness:
+To prove the correctness of a dynamic programming algorithm, we typically use mathematical induction on the size of the subproblems. We show that the solution to a larger subproblem can be computed using the solutions to smaller subproblems.
 
-## 4. Maximum-Flow/Min-Cut and Matching
+### Finding Runtimes:
+The runtime of a dynamic programming algorithm depends on the number of subproblems and the cost of solving each subproblem. In some cases, the runtime can be exponential, but in most cases, it is polynomial.
 
-Maximum-flow/min-cut and matching algorithms are algorithms that find the maximum flow, minimum cut, or maximum matching in a network.
+## Maximum-Flow/Min-Cut and Matching
 
-Examples:
-- Ford-Fulkerson algorithm
-- Edmonds-Karp algorithm
-- Dinic's algorithm
-- Hopcroft-Karp algorithm
+### Solving Problems:
+Maximum-flow/min-cut and matching are optimization problems that involve finding the maximum flow or minimum cut in a flow network, or finding a maximum matching in a bipartite graph.
 
-Resources:
-- [GeeksforGeeks: Maximum Flow Problem Introduction](https://www.geeksforgeeks.org/max-flow-problem-introduction/)
-- [Khan Academy: Maximum Flow and Minimum Cut](https://www.khanacademy.org/computing/computer-science/algorithms/flow-networks/a/maximum-flow-problems)
-- [Brilliant: Maximum Flow and Minimum Cut](https://brilliant.org/wiki/maximum-flow-minimum-cut/)
+### Proving Correctness:
+To prove the correctness of a maximum-flow/min-cut or matching algorithm, we typically use duality theory or the augmenting path theorem. 
 
-## 5. Linear Programming
+### Finding Runtimes:
+The runtime of a maximum-flow/min-cut or matching algorithm depends on the specific algorithm used and the size of the input. Some algorithms have a runtime of O(|V|^2|E|), while others have a runtime of O(|V||E|^2).
 
-Linear programming is a technique for solving optimization problems that involve linear relationships.
+## Linear Programming
 
-Examples:
-- Transportation problem
-- Diet problem
-- Production problem
+### Problem Solving
+- Linear programming is used to solve optimization problems, where we want to maximize or minimize a linear objective function subject to some linear constraints.
+- In order to solve a linear programming problem, we first need to set up a mathematical model of the problem, which involves defining the decision variables, objective function, and constraints.
+- The simplex algorithm is a widely-used method for solving linear programming problems, which involves iteratively moving from one feasible solution to another in a way that improves the objective function value.
 
-Resources:
-- [GeeksforGeeks: Linear Programming](https://www.geeksforgeeks.org/linear-programming/)
-- [Khan Academy: Linear Programming](https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-derivatives/)
+### Proving Correctness
+- The correctness of linear programming algorithms relies on the theory of linear algebra and convex optimization.
+- The simplex algorithm is guaranteed to terminate with an optimal solution if certain conditions are met, such as the problem being bounded and having a finite optimal solution.
+- Other algorithms for solving linear programming problems, such as interior-point methods, also have theoretical guarantees of correctness.
 
-Sure, here's the rest of the review sheet in markdown format:
+### Finding Runtimes
+- The runtime of the simplex algorithm depends on the size of the problem, measured by the number of decision variables and constraints.
+- The worst-case runtime of the simplex algorithm is exponential in the size of the problem, but in practice it tends to perform much better than this worst-case bound.
+- Other algorithms for solving linear programming problems, such as interior-point methods, have polynomial runtimes in the size of the problem.
 
-## 6. NP-Completeness
+## NP-Completeness
 
-NP-Completeness is a class of decision problems for which no efficient algorithm is currently known. These problems are considered "hard" in the sense that the time required to solve them grows exponentially with the size of the input.
+### Problem Solving
+- NP-completeness is a class of computational problems that are believed to be intractable, meaning that no efficient algorithm exists for solving them.
+- In order to solve an NP-complete problem, we typically use approximation algorithms or heuristics that provide a good enough solution within a reasonable amount of time.
+- Many important computational problems in a wide range of fields, such as scheduling, optimization, and game theory, are known to be NP-complete.
 
-Examples:
-- Traveling salesman problem
-- Knapsack problem
-- Boolean satisfiability problem
+### Proving Correctness
+- Proving that a problem is NP-complete typically involves reduction, which means showing that the problem can be transformed into another known NP-complete problem in polynomial time.
+- The correctness of approximation algorithms and heuristics for NP-complete problems is typically analyzed in terms of their approximation ratios, which measure how close the solution they provide is to the optimal solution.
 
-Resources:
-- [GeeksforGeeks: NP-Completeness](https://www.geeksforgeeks.org/np-completeness-set-1/)
-- [Khan Academy: NP-Completeness](https://www.khanacademy.org/computing/computer-science/algorithms/np-completeness/a/np-completeness-introduction)
-- [MIT OpenCourseWare: P vs. NP](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2005/lecture-notes/lec22.pdf)
+### Finding Runtimes
+- The runtime of an algorithm for an NP-complete problem is typically exponential in the size of the problem.
+- Approximation algorithms and heuristics for NP-complete problems often have polynomial runtimes, but the quality of the solutions they provide may be lower than that of an optimal solution.
 
-## 7. Hashing/Sketches
+## Hashing/Sketches
 
-Hashing and sketching are techniques for compressing large datasets or reducing their dimensionality while preserving important information.
+### Solving Problems
+Hashing and sketches are used in a variety of problems where data needs to be quickly searched, updated or queried. Some common examples include:
 
-Examples:
-- Bloom filters
-- Count-min sketches
+- Checking if an item exists in a set
+- Counting the frequency of items in a stream
+- Detecting duplicates in a dataset
+- Approximating heavy hitters (i.e., items with the highest frequency) in a stream
 
-Resources:
-- [GeeksforGeeks: Hashing Data Structure](https://www.geeksforgeeks.org/hashing-data-structure/)
-- [Khan Academy: Hash Tables](https://www.khanacademy.org/computing/computer-science/algorithms/hash-tables/a/hash-tables)
-- [Brilliant: Count-Min Sketches](https://brilliant.org/wiki/count-min-sketch/)
+### Proving Correctness
+The correctness of hashing and sketches generally depends on the probability of collision (i.e., two distinct items being hashed to the same value). The probability of collision can be calculated using various techniques, including the birthday paradox and the coupon collector's problem. 
+
+The analysis of sketch algorithms often involves showing that the expected error (i.e., the difference between the approximate answer and the true answer) is within a certain bound with high probability.
+
+### Finding Runtimes
+The runtime of hashing and sketch algorithms depend on several factors, including the size of the input data, the size of the hash table or sketch, and the probability of collision.
+
+For hashing, the average-case runtime for inserting and searching an item is O(1) with high probability. However, in the worst case (when all items hash to the same value), the runtime is O(n), where n is the number of items.
+
+For sketches, the runtime depends on the size of the sketch and the number of hash functions used. For example, the Count-Min sketch has a runtime of O(k), where k is the size of the sketch, and the number of hash functions used affects the accuracy of the sketch.
