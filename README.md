@@ -1,23 +1,23 @@
 # Exam Preparation Schedule
 
-Based on the time you have available, here's a suggested schedule for reviewing the material:
-
 Friday, April 28:
 - 9am-12pm: Review materials on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
+- 1pm-4pm: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
 
 Sunday, April 30:
-- 11am-3pm: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 11am-3pm: Review materials on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
 
 Monday, May 1:
-- 9am-11am: Attend review session on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
-- 1pm-3pm: Review materials on NP-Completeness and Hashing/Sketches.
-- 4pm-6pm: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 9am-11am: Review materials on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 2pm-4pm: Attend review session on Divide-and-Conquer Algorithms, Graph Traversal and Shortest Paths, and Dynamic Programming.
 
 Tuesday, May 2:
-- 11am-1pm: Attend review session on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 9am-11am: Attend review session on Maximum-Flow/Min-Cut and Matching and Linear Programming.
+- 11am-1pm: Learn more about NP-Completeness.
 - 2pm-4pm: Attend review session on NP-Completeness and Hashing/Sketches.
 
 Wednesday, May 3:
+- 8:30am-9am: Review materials on NP-Completeness and Hashing/Sketches, or anything else that may still be slightly unclear.
 - Exam day! Give yourself time to review and prepare before the exam.
 
 # Review Sheet for Algorithms Final Exam
